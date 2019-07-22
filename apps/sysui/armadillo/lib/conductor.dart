@@ -478,10 +478,18 @@ class ConductorState extends State<Conductor> {
                 suggestion: suggestion,
                 suggestionInitialGlobalBounds: globalBounds,
                 bottomMargin: minimizedNowHeight,
+                onSuggestionExpanded: (Suggestion suggestion) => _focusOnStory(
+                  suggestion.selectionStoryId,
+                  storyModel,
+                ),
               )
             : new SplashSuggestion(
                 suggestion: suggestion,
                 suggestionInitialGlobalBounds: globalBounds,
+                onSuggestionExpanded: (Suggestion suggestion) => _focusOnStory(
+                  suggestion.selectionStoryId,
+                  storyModel,
+                ),
               ),
       );
       _minimizeNow();
