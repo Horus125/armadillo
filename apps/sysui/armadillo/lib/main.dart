@@ -76,17 +76,20 @@ Future<Null> main() async {
   VolumeModel volumeModel = new DummyVolumeModel();
 
   Widget app = MaterialApp(
-    home: _buildApp(
-      suggestionModel: jsonSuggestionModel,
-      storyModel: storyModel,
-      nowModel: nowModel,
-      storyClusterDragStateModel: storyClusterDragStateModel,
-      storyRearrangementScrimModel: storyRearrangementScrimModel,
-      storyDragTransitionModel: storyDragTransitionModel,
-      debugModel: debugModel,
-      panelResizingModel: panelResizingModel,
-      contextModel: contextModel,
-      volumeModel: volumeModel,
+    home: Material(
+      type: MaterialType.transparency,
+      child: _buildApp(
+        suggestionModel: jsonSuggestionModel,
+        storyModel: storyModel,
+        nowModel: nowModel,
+        storyClusterDragStateModel: storyClusterDragStateModel,
+        storyRearrangementScrimModel: storyRearrangementScrimModel,
+        storyDragTransitionModel: storyDragTransitionModel,
+        debugModel: debugModel,
+        panelResizingModel: panelResizingModel,
+        contextModel: contextModel,
+        volumeModel: volumeModel,
+       ),
     ),
   );
 
